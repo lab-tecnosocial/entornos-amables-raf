@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+      <!-- Primary Meta Tags -->
+      <title>Construyendo ciudades para todas y todes.
+        La experiencia Entornos Amables de Reflexión y Acción Feminista.</title>
+      <meta name="title" content="Construyendo ciudades para todas y todes.
+      La experiencia Entornos Amables de Reflexión y Acción Feminista.">
+      <meta name="description"
+          content="Un proyecto para fomentar la autonomía territorial y la apropiación del espacio público.
+          Del 23 de agosto al 8 de noviembre de 2024, el Centro de Estudios Preparatoria 3 de la Universidad Autónoma de Yucatán (UABIC) fue sede del proyecto Entornos Amables, llevado a cabo como parte de las actividades de la materia de Sociocomunitaria. Este proyecto tuvo como objetivo principal crear un espacio de reflexión y acción en torno al fortalecimiento de la autonomía territorial y la apropiación del espacio público, generando así ciudadanas con responsabilidad social en su desplazamiento y desarrollo en la ciudad y mujeres más seguras. 
+          ">
+     <meta property="og:image" content="https://rafeminista.net/entornosamables.jpg">
+  
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Construyendo ciudades para todas y todes.
+      La experiencia Entornos Amables de Reflexión y Acción Feminista.">
+      <meta property="og:description"
+          content="Un proyecto para fomentar la autonomía territorial y la apropiación del espacio público.
+          Del 23 de agosto al 8 de noviembre de 2024, el Centro de Estudios Preparatoria 3 de la Universidad Autónoma de Yucatán (UABIC) fue sede del proyecto Entornos Amables, llevado a cabo como parte de las actividades de la materia de Sociocomunitaria. Este proyecto tuvo como objetivo principal crear un espacio de reflexión y acción en torno al fortalecimiento de la autonomía territorial y la apropiación del espacio público, generando así ciudadanas con responsabilidad social en su desplazamiento y desarrollo en la ciudad y mujeres más seguras. ">
+      <meta property="og:image" content="https://rafeminista.net/entornosamables.jpg">
+  
+      <!-- Twitter -->
+      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:title" content="Construyendo ciudades para todas y todes.
+      La experiencia Entornos Amables de Reflexión y Acción Feminista.">
+      <meta property="twitter:description"
+          content="Un proyecto para fomentar la autonomía territorial y la apropiación del espacio público.
+          Del 23 de agosto al 8 de noviembre de 2024, el Centro de Estudios Preparatoria 3 de la Universidad Autónoma de Yucatán (UABIC) fue sede del proyecto Entornos Amables, llevado a cabo como parte de las actividades de la materia de Sociocomunitaria. Este proyecto tuvo como objetivo principal crear un espacio de reflexión y acción en torno al fortalecimiento de la autonomía territorial y la apropiación del espacio público, generando así ciudadanas con responsabilidad social en su desplazamiento y desarrollo en la ciudad y mujeres más seguras.">
+      <meta property="twitter:image" content="https://rafeminista.net/entornosamables.jpg">
+    
+    
+    <title>Construyendo ciudades para todas y todes.
+        La experiencia Entornos Amables de Reflexión y Acción Feminista.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="script.js" defer></script>
+    <style>
+        .lang-switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-switch input {
+            display: none;
+        }
+
+        .slider {
+            position: relative;
+            width: 60px;
+            height: 34px;
+            background-color: #ccc;
+            border-radius: 34px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+            margin: 0 10px;
+        }
+
+        .slider:before {
+            content: "";
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.4s;
+        }
+
+        input:checked+.slider {
+            background-color: #ccc;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .lang-label {
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .slider {
+                width: 30px;
+                height: 17px;
+            }
+
+            .slider:before {
+                width: 13px;
+                height: 13px;
+                left: 2px;
+                bottom: 2px;
+            }
+
+            input:checked+.slider:before {
+                transform: translateX(13px);
+            }
+
+            .lang-label {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- boton para cambiar de idioma -->
+    <div class="lang-switch">
+        <span class="lang-label">Español</span>
+        <input type="checkbox" id="lang-toggle" onclick="switchLanguage()">
+        <label for="lang-toggle" class="slider"></label>
+        <span class="lang-label">Ingles</span>
+    </div>
+    <main>
+        <section id="intro" class="scrolly">
+            <figure id="intro-fig" class="figure__full">
+                <img src="img/1.gif" class="image__full">
+                <div class="overlay"></div>
+                <div id="canvas"></div>
+            </figure>
+            <div id="cinta">
+                <h1>Construyendo ciudades para todas y todes: <br>
+                    La experiencia Entornos Amables de Reflexión y Acción Feminista</h1>
+            </div>
+        </section>
+
+        <section class="scrolly text-block">
+            <article>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="textointro">Entornos Amables quiere fortalecer la seguridad vial urbana y la autonomía de niños, jóvenes, mujeres y población LGBTQI+ que viven en el sur de Mérida, Yucatán, a través de un mapeo de percepción de seguridad, diálogo sobre la violencia en el espacio público, teóricamente. talleres prácticos sobre el uso seguro de la bicicleta, y creación de un mural colectivo que refleje las realidades que enfrentan los usuarios vulnerables de la vía.
+                    <br>
+                    <br>
+                    Si bien se han impulsado cambios en las políticas públicas a nivel local en materia de transporte público y movilidad no motorizada en Mérida, Yucatán, México, la escasa incorporación de la perspectiva de género, el enfoque sistémico de la seguridad vial y el desarrollo de políticas para desincentivar el uso del vehículo privado han llevado a la perpetuación y normalización de la violencia sistémica contra grupos (mujeres, niños, adultos mayores, personas con discapacidad, pueblos indígenas) que han sido históricamente vulnerados.
+                    <br>
+                    <br>
+                    El género juega un papel preponderante en la violencia vial y en la forma en que las personas viven la ciudad. El proyecto busca reducir las barreras que limitan el disfrute del derecho a la movilidad segura y el derecho a un ambiente saludable, a través de la construcción de información veraz a través de una nueva cuenta ciclista y promover la construcción de entornos amigables en los que las personas puedan moverse.</p>
+                    <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/2.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                <p> <b> Un proyecto para fomentar la autonomía territorial y la apropiación del espacio público. </b><br><br>
+Del 23 de agosto al 8 de noviembre de 2024, el Centro de Estudios Preparatoria 3 de la Universidad Autónoma de Yucatán (UABIC) fue sede del proyecto Entornos Amables, llevado a cabo como parte de las actividades de la materia de Sociocomunitaria. Este proyecto tuvo como objetivo principal crear un espacio de reflexión y acción en torno al fortalecimiento de la autonomía territorial y la apropiación del espacio público, generando así ciudadanas con responsabilidad social en su desplazamiento y desarrollo en la ciudad y mujeres más seguras. 
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>A project to promote territorial autonomy and the appropriation of public space.</b><br><br>
+                        From August 23 to November 8, 2024, the Preparatory Study Center 3 of the Autonomous University of Yucatán (UABIC) hosted the Friendly Environments project, carried out as part of the activities of the Socio-community subject. The main objective of this project was to create a space for reflection and action around the strengthening of territorial autonomy and the appropriation of public space, thus generating citizens with social responsibility in their movement and development in the city and safer women.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/3.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>OBJETIVOS DEL PROYECTO</b> <br><br>
+                        El proyecto Entornos Amables buscó fortalecer la seguridad social y vial urbana, así como la autonomía de la población juvenil y LGBTQI+ que vive en el sur de Mérida, Yucatán, brindando herramientas para fortalecer el conocimiento del entorno y habilidades para una movilidad urbana sostenible segura y responsable.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>PROJECT OBJECTIVES</b> <br><br>
+                        The Friendly Environments project sought to strengthen urban social and road safety, as well as the autonomy of the youth and LGBTQI+ population living in the south of Mérida, Yucatán, providing tools to strengthen knowledge of the environment and skills for safe and sustainable urban mobility and responsible.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/4.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>ACTIVIDADES REALIZADAS</b> <br><br>
+                    A lo largo de estas semanas, los estudiantes participaron en una serie de talleres, dinámicas grupales y actividades de sensibilización, que incluyeron:
+                    <br><b> 1. Sesiones de mapeo cuerpo-territorio</b>: Reflexión sobre la seguridad en su entorno cercano.
+                    <br><b> 2. Retoma la Calle</b>: Recorridos por las inmediaciones de la preparatoria para identificar espacios seguros e inseguros.
+                    <br><b> 3. Talleres de bicicleta</b>: Fortalecimiento de habilidades para usar la bicicleta como medio de transporte seguro.
+                    <br><b> 4. Intervención mural</b>: Creación de un mural colectivo que visibiliza diversas problemáticas sociales.
+                    <br><b> 5. Espacios de reflexión sobre inclusión y respeto a la diversidad</b>.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>ACTIVITIES CARRIED OUT</b> <br><br>
+                        Throughout these weeks, students participated in a series of workshops, group dynamics and awareness-raising activities, which included:
+                        <br><b> 1. Body-territory mapping sessions</b>: Reflection on safety in your immediate environment.
+                        <br><b> 2. Take Back the Street</b>: Tours around the high school to identify safe and unsafe spaces.
+                        <br><b> 3. Bicycle workshops</b>: Strengthening skills to use the bicycle as a safe means of transportation.
+                        <br><b> 4. Mural intervention</b>: Creation of a collective mural that makes various social problems visible.
+                        <br><b> 5. Spaces for reflection on inclusion and respect for diversity</b>.
+                        </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/5.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>IMPACTOS Y LOGROS</b> <br><br>
+                    <p>El proyecto Entornos Amables logró involucrar a un gran número de estudiantes mujeres y de identidades no binarias, quienes a través de su participación no solo mejoraron sus habilidades de trabajo colaborativo, sino que fueron capaces de identificar las zonas seguras e inseguras en las inmediaciones de su institución educativa. Además, adquirieron conocimientos sobre la anatomía de la bicicleta y las posibilidades que esta ofrece para sus traslados cotidianos. Aprendieron cómo mitigar los riesgos del entorno urbano mediante el uso y mantenimiento básico de la bicicleta, lo que les permitió resolver posibles complicaciones durante sus desplazamientos.
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p> A través del mural, también aprendieron a expresar su voz y a visibilizar sus deseos y expectativas sobre los entornos que desean habitar. A su vez, se generaron propuestas concretas para continuar mejorando los espacios y las relaciones dentro del centro educativo.
+                       Este tipo de iniciativas refuerzan el compromiso de la Universidad Autónoma de Yucatán con el desarrollo integral de sus estudiantes y con la creación de ambientes más saludables y colaborativos en todos sus espacios.</p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>IMPACT AND ACHIEVEMENTS</b> <br><br>
+                    <p>The Friendly Environments project managed to involve a large number of female students and students of non-binary identities, who through their participation not only improved their collaborative work skills, but were able to identify safe and unsafe areas in the vicinity of their school. educational institution. In addition, they acquired knowledge about the anatomy of the bicycle and the possibilities it offers for their daily trips. They learned how to mitigate the risks of the urban environment through the use and basic maintenance of the bicycle, which allowed them to resolve possible complications during their trips.</p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>Through the mural, they also learned to express their voice and make visible their desires and expectations about the environments they wish to inhabit. At the same time, concrete proposals were generated to continue improving spaces and relationships within the educational center.
+                        These types of initiatives reinforce the commitment of the Autonomous University of Yucatán with the comprehensive development of its students and with the creation of healthier and more collaborative environments in all its spaces.</div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/6.jpg" class="image__center">
+            </figure>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/7.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p> <b>Inicia el Proyecto RAF con un enfoque en feminismo y autoconocimiento</b> <br><br>
+                        Que busca llevar espacios de fortalecimiento de las autonomías desde un enfoque feminista a diversas comunidades. 
+Durante el encuentro, se establecieron acuerdos clave para fomentar un ambiente respetuoso y seguro, tales como:
+<br> - Hablar en primera persona, desde el "yo".
+<br> - Respetar todas las opiniones, mostrando empatía.
+<br> - Evitar interrupciones y el uso del celular durante las sesiones.
+<br> - Asegurar la confidencialidad, entendiendo que lo compartido dentro del espacio permanece en él.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>
+                        <b>The RAF Project begins with a focus on feminism and self-knowledge</b> <br><br>
+                        That seeks to bring spaces for strengthening autonomies from a feminist approach to various communities. 
+During the meeting, key agreements were established to foster a respectful and safe environment, such as:
+<br> - Speak in the first person, from the "I".
+<br> - Respect all opinions, showing empathy.
+<br> - Avoid interruptions and cell phone use during sessions.
+<br> - Ensure confidentiality, understanding that what is shared within the space remains there.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/8.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Actividad: Mapeo Cuerpo Territorio</b> <br><br>
+                        Cada participante recibió un trozo de papel kraft donde dibujó su cuerpo y representó sus lugares cotidianos sobre él. A continuación, identificaron cuáles de esos lugares percibían como seguros o inseguros, colocándoles un distintivo. Al final de la actividad, las participantes compartieron sus reflexiones y sensaciones sobre los dibujos realizados
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Activity: Body Territory Mapping</b> <br><br>
+                        Each participant received a piece of kraft paper where they drew their body and represented their daily places on it. They then identified which of those places they perceived as safe or unsafe by giving them a badge. At the end of the activity, the participants shared their reflections and feelings about the drawings made. </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/9.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Hallazgos significativos</b> <br><br>
+                        El equipo facilitador reflexionó sobre la profundidad de la actividad, destacando que el mapeo del cuerpo podría abrir situaciones emocionales difíciles de compartir en un primer encuentro, ya que algunas participantes enfrentan experiencias de violencia en casa que aún no están listas para discutir con personas que no conocen. Esta potente herramienta, aunque valiosa, requiere más tiempo y acompañamiento para asegurar un espacio de apoyo adecuado.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Significant findings</b> <br><br>
+                        The facilitating team reflected on the depth of the activity, highlighting that body mapping could open up emotional situations that are difficult to share in a first meeting, since some participants face experiences of violence at home that they are not yet ready to discuss with people who do not. they know This powerful tool, although valuable, requires more time and support to ensure adequate support space.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/10.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>
+                        La participación en la actividad de dibujo fue activa; las participantes se mostraron concentradas en reflexionar sobre los lugares a representar. Sin embargo, al momento de compartir, hubo reticencia en varias participantes a revelar sus pensamientos, lo cual se atribuyó a la falta de confianza en el grupo en ese primer encuentro.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>
+                        Participation in the drawing activity was active; The participants seemed focused on reflecting on the places to represent. However, at the time of sharing, there was reluctance on the part of several participants to reveal their thoughts, which was attributed to the lack of trust in the group at that first meeting.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/11.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflexiones</b> <br><br>
+                        La sesión, aunque desafiante en cuanto a la apertura de las participantes, demostró el potencial de la metodología utilizada para fomentar la reflexión sobre el cuerpo y los espacios de seguridad. El equipo de RAF continuará trabajando en crear un ambiente de confianza y apoyo en las siguientes sesiones.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflections</b> <br><br>The session, although challenging in terms of the openness of the participants, demonstrated the potential of the methodology used to encourage reflection on the body and spaces of safety. The RAF team will continue to work on creating an environment of trust and support in the following sessions.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/12.jpg" class="image__center">
+            </figure>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/13.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p> <b>Recorrido para identificar áreas de riesgo y mejorar la seguridad urbana</b> <br><br>
+                        El pasado viernes 30 de agosto, las participantes del proyecto Entornos Amables llevaron a cabo la segunda sesión titulada Retoma la Calle. En esta actividad, divididas en dos grupos de 13 personas cada uno, realizaron un recorrido por dos rutas asignadas en las inmediaciones de su institución educativa, con el objetivo de identificar espacios seguros e inseguros en su entorno. 
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Tour to identify risk areas and improve urban safety</b> <br><br>
+                        Last Friday, August 30, the participants of the Friendly Environments project carried out the second session titled Retake the Street. In this activity, divided into two groups of 13 people each, they took a tour along two assigned routes in the vicinity of their educational institution, with the aim of identifying safe and unsafe spaces in their environment.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/14.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>Durante el recorrido, las participantes desempeñaron distintos roles para facilitar el proceso:
+                        <br> - Fotógrafas: Encargadas de tomar fotografías utilizando la app Mapillary, que permitió documentar y geolocalizar puntos significativos en el recorrido.
+                        <br> - Relatoras: Se encargaron de anotar en hojas y tablas las observaciones y comentarios de las participantes sobre los aspectos que les llamaban la atención.
+                        <br> - Seguridad: Un grupo responsable de velar por la integridad de las participantes, asegurándose de que el grupo se mantuviera unido y sin incidentes.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>During the tour, the participants played different roles to facilitate the process:
+                        <br> - Photographers: In charge of taking photographs using the Mapillary app, which allowed documenting and geolocating significant points on the route.
+                        <br> - Rapporteurs: They were in charge of writing down on sheets and tables the observations and comments of the participants about the aspects that caught their attention.
+                        <br> - Security: A group responsible for ensuring the integrity of the participants, ensuring that the group remained united and without incident.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/15.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>Además, algunas participantes fueron asignadas con condiciones de interseccionalidad diferentes a las que suelen atravesar habitualmente, como discapacidades motrices, pertenencia a pueblos originarios, ser personas afrodescendientes, trans, de la tercera edad o infancias, con el fin de empatizar con diversas realidades y hacer el recorrido desde un enfoque de inclusividad.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>In addition, some participants were assigned with intersectionality conditions different from those they usually go through, such as motor disabilities, belonging to indigenous peoples, being people of African descent, trans, elderly or childhood, in order to empathize with various realities and make the journey from a focus on inclusivity.</p>
+                </div>
+            </article>
+        </section>
+
+
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/16.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Hallazgos significativos</b> <br><br>
+                        Durante el recorrido, se identificaron varias situaciones en el espacio urbano que generaron inseguridad en las participantes. Entre los hallazgos más relevantes se destacan:
+                        <br> <b> - Inseguridad nocturna</b>: Algunas calles que en el día parecían seguras, resultaron ser incómodas y peligrosas durante la noche debido a la falta de luminaria adecuada.
+                    </div>
+                    <div class="step" data-step="2">
+                        <br> <b> - Acoso verbal</b>: Se identificó un domicilio donde habitan hombres con hábitos de consumo frecuente de alcohol, quienes han acosado verbalmente a las estudiantes en varias ocasiones.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Significant findings</b> <br><br>
+                        During the tour, several situations were identified in the urban space that generated insecurity in the participants. Among the most relevant findings are:
+                        <br><b> - Nighttime insecurity</b>: Some streets that seemed safe during the day turned out to be uncomfortable and dangerous at night due to the lack of adequate lighting.
+                    </div>
+                    <div class="step" data-step="2">
+                        <br><b> - Verbal harassment</b>: A home was identified where men with frequent alcohol consumption habits live, who have verbally harassed the students on several occasions.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/17.jpg" class="image__center">
+            </figure>
+        </section>
+
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/18.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b> - Condiciones urbanas deficientes</b>: Las participantes señalaron la presencia de aceras y banquetas en mal estado, la falta de alumbrado público, la acumulación de basura, y objetos que obstruyen el paso, como piedras, anuncios y motocicletas estacionadas.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p><b> - Zonas de alto riesgo</b>: Se mencionó la presencia de asentamientos irregulares y terrenos baldíos cercanos a la escuela y al centro deportivo, que también fueron percibidos como áreas de riesgo.
+                    </p>
+                </div>
+                    
+                <div class="step" data-step="3">
+                    <p><b> - Preocupaciones por acoso sexual</b>: Las jóvenes expresaron su inseguridad al transitar por la zona cercana a un establecimiento de venta de alcohol, donde se sienten vulnerables debido a casos previos de acoso sexual.
+                    </p>
+                </div>
+
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b> - Poor urban conditions</b>: The participants pointed out the presence of sidewalks and sidewalks in poor condition, the lack of public lighting, the accumulation of garbage, and objects that obstruct the passage, such as stones, advertisements, and parked motorcycles.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p><b> -  High-risk areas</b>: The presence of irregular settlements and vacant land near the school and sports center was mentioned, which were also perceived as risk areas.
+                    </p>
+                    </div>
+                <div class="step" data-step="3">
+                    <p><b> - Concerns about sexual harassment</b>: The young women expressed their insecurity when traveling through the area near an alcohol sales establishment, where they feel vulnerable due to previous cases of sexual harassment.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/19.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>
+                        A pesar de estas preocupaciones, las participantes coincidieron en que durante el recorrido se sintieron seguras debido a la presencia del grupo, lo que les brindó un sentimiento de protección y apoyo mutuo.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p> Despite these concerns, the participants agreed that during the tour they felt safe due to the presence of the group, which gave them a feeling of protection and mutual support.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/20.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflexión y próximo paso</b> <br><br>
+                        Esta actividad fue un paso importante para visibilizar las condiciones de inseguridad en el entorno urbano y fomentar la reflexión sobre la necesidad de transformar los espacios públicos en lugares más seguros e inclusivos para todas las personas. Las participantes han quedado motivadas para seguir trabajando en soluciones concretas que mejoren la seguridad en su comunidad y para visibilizar las problemáticas de movilidad urbana y violencia de género que afectan a las mujeres y a las personas en situación de vulnerabilidad. 
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflection and next step</b> <br><br>
+                        This activity was an important step to make visible the conditions of insecurity in the urban environment and encourage reflection on the need to transform public spaces into safer and more inclusive places for all people. The participants have been motivated to continue working on concrete solutions that improve security in their community and to make visible the problems of urban mobility and gender violence that affect women and people in vulnerable situations.</p>
+                </div>
+            </article>
+        </section>
+
+
+
+<section class="scrolly">
+    <figure class="figure__full">
+        <img src="img/21.jpg" class="image__center">
+    </figure>
+</section>
+
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/22.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Fomentando la movilidad y las autonomías a través del ciclismo</b> <br><br>
+                        El pasado viernes 13 de septiembre, el proyecto Entornos Amables continuó con su tercera sesión titulada Mujeres al Pedal 1, enfocada en promover el conocimiento sobre las bicicletas y sus beneficios para la movilidad cotidiana de las participantes. La sesión comenzó con un breve recordatorio de los acuerdos de convivencia y la presentación del equipo de trabajo.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Promoting mobility and autonomy through cycling</b> <br><br>
+                        Last Friday, September 13, the Friendly Environments project continued with its third session titled Women at the Pedal 1, focused on promoting knowledge about bicycles and their benefits for the participants' daily mobility. The session began with a brief reminder of the coexistence agreements and the presentation of the work team.</p>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/23.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p> Durante el encuentro, se realizaron varias actividades dinámicas para que las participantes se familiarizaran con el mundo del ciclismo:
+                        <br><b> - Tipos de bicicletas y sus usos</b>: A través de un juego de memorama, las estudiantes aprendieron sobre los diferentes tipos de bicicletas que se pueden encontrar en la ciudad, así como las características de ruta o estilo de vida para los cuales están diseñadas.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p><br><b> - Partes de la bicicleta</b>: Con un juego similar al clásico "ponle la cola al burro", pero adaptado a las bicicletas, las participantes identificaron las partes de la bici y su ubicación. Aunque muchas ya conocían las partes más comunes, varias sorprendieron al descubrir componentes que no habían notado antes.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>During the meeting, several dynamic activities were carried out so that the participants could become familiar with the world of cycling:
+                        <br><b> - Types of bicycles and their uses</b>: Through a memory game, the students learned about the different types of bicycles that can be found in the city, as well as the route or lifestyle characteristics for which they are designed.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p><br><b> - Parts of the bicycle</b>: With a game similar to the classic "pin the tail on the donkey", but adapted to bicycles, the participants identified the parts of the bike and their location. Although many already knew the most common parts, several were surprised to discover components that they had not noticed before.</p>
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/24.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p> 
+                        <br><b> - Accesorios</b>: Se explicó la diferencia entre las partes esenciales de la bicicleta y los accesorios que complementan su funcionalidad.
+                        <br><b> - Equilibrio</b>: Para las participantes que no sabían andar en bicicleta, se les mostró la manera de practicar el equilibrio, fomentando así la confianza y el aprendizaje en el uso de la bicicleta.
+                        <br><b> - Cierre</b>: La sesión concluyó con una sopa de letras que permitió a las participantes reflexionar sobre lo aprendido y compartir sus experiencias de manera amena.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>
+                        <br><b> - Accessories</b>: The difference between the essential parts of the bicycle and the accessories that complement its functionality was explained.
+                        <br><b> - Balance</b>: For participants who did not know how to ride a bicycle, they were shown how to practice balance, thus promoting confidence and learning in using the bicycle.
+                        <br><b> - Closing</b>: The session concluded with a word search that allowed participants to reflect on what they had learned and share their experiences in an entertaining way. 
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/25.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p> <b>Hallazgos significativos</b>
+                        <br> Aunque la sesión comenzó con cierta dificultad, se observó que muchas participantes no se sentían completamente seguras al compartir sus reflexiones. Sin embargo, a medida que avanzaron los juegos y las actividades, la mayoría de ellas se fue animando a participar.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>
+                        Un reto adicional fue el clima caluroso, ya que varias estudiantes mencionaron sentirse incómodas debido al calor y la falta de ventilación en algunos salones. Esto afectó su bienestar y confort durante la sesión. A raíz de este comentario, se acordó llevar bolis u opciones frescas al inicio de la próxima sesión, además de realizar alguna actividad interactiva para facilitar que las participantes se conozcan más entre ellas, propiciando así un ambiente de confianza.
+                    </p>
+                </div>
+                
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Significant findings</b><br><br>
+                        Although the session began with some difficulty, it was observed that many participants did not feel completely confident in sharing their reflections. However, as the games and activities progressed, most of them became encouraged to participate.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>
+                        An additional challenge was the hot weather, as several students mentioned feeling uncomfortable due to the heat and lack of ventilation in some classrooms. This affected their well-being and comfort during the session. As a result of this comment, it was agreed to bring pens or fresh options at the beginning of the next session, in addition to carrying out some interactive activity to help the participants get to know each other better, thus fostering an environment of trust.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/26.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflexión y próximos pasos</b><br><br>
+                        A pesar de los desafíos, la sesión fue una oportunidad valiosa para introducir a las jóvenes en el uso de la bicicleta como herramienta de movilidad y empoderamiento. El equipo de trabajo está comprometido en mejorar las condiciones de las próximas sesiones, asegurando que las participantes se sientan cómodas, seguras y motivadas a seguir aprendiendo y compartiendo sus experiencias.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflection and next steps</b><br><br>
+                        Despite the challenges, the session was a valuable opportunity to introduce young women to the use of bicycles as a tool for mobility and empowerment. The work team is committed to improving the conditions of the next sessions, ensuring that the participants feel comfortable, safe and motivated to continue learning and sharing their experiences.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/27.jpg" class="image__center">
+            </figure>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/28.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Fortaleciendo la confianza y seguridad en el uso de la bicicleta</b><br><br>
+                        El pasado viernes 27 de septiembre, el proyecto Entornos Amables continuó con su cuarta sesión, Mujeres al Pedal 2, con el objetivo de seguir empoderando a las participantes a través del uso de la bicicleta, promoviendo la seguridad y fortaleciendo los lazos grupales. 
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Strengthening confidence and safety in the use of bicycles</b><br><br>
+                        Last Friday, September 27, the Friendly Environments project continued with its fourth session, Mujeres al Pedal 2, with the aim of continuing to empower participants through the use of bicycles, promoting safety and strengthening group ties.   
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/29.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>La jornada comenzó con una actividad rompehielos, diseñada para fortalecer la confianza colectiva y la participación entre las participantes. Divididas en dos grupos, las jóvenes se dirigieron al vivero del UABIC, donde compartieron sus sentimientos sobre cómo llegaron al espacio y sus primeras experiencias utilizando la bicicleta.
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p>La segunda actividad consistió en dibujar el trayecto más común que las participantes realizan, destacando las características más importantes de dicho recorrido. Tras la actividad, las facilitadoras guiaron a las jóvenes a reflexionar sobre los factores que consideran al planificar sus rutas, tales como el tiempo y la seguridad. Los resultados fueron recopilados y compartidos por las estudiantes, promoviendo una reflexión colectiva sobre los elementos importantes en sus traslados.
+                    </p>
+                </div>
+
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                    <div class="step" data-step="1">
+                        <p>The day began with an icebreaker activity, designed to strengthen collective trust and participation among participants. Divided into two groups, the young women went to the UABIC nursery, where they shared their feelings about how they came to the space and their first experiences using the bicycle.</p>
+                    </div>
+    
+                    <div class="step" data-step="2">
+                        <p>The second activity consisted of drawing the most common route that the participants take, highlighting the most important characteristics of said route. After the activity, the facilitators guided the young women to reflect on the factors they consider when planning their routes, such as weather and safety. The results were compiled and shared by the students, promoting a collective reflection on the important elements in their transfers.</p>
+                    </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/30.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p> <b>Accesorios de seguridad y autodefensa</b> <br> <br>
+                        La sesión continuó con una charla sobre los accesorios de seguridad que pueden hacer sus viajes más seguros. Las participantes aprendieron sobre elementos esenciales como cadenas, reflejantes, luces, cascos y chalecos. También se les animó a pensar en las situaciones que podrían ponerlas en alerta durante sus trayectos.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>En una actividad dinámica, las facilitadoras proporcionaron chalecos, plumones y pinturas a las estudiantes, invitándolas a escribir mensajes dirigidos a los conductores para hacerlos más conscientes de su presencia y garantizar un trayecto más seguro.</p>
+                </div>
+
+                <div class="step" data-step="3">
+                    <p>La última parte de la sesión fue dedicada a técnicas de autodefensa en bicicleta. Las facilitadoras enseñaron estrategias como el "caballito" y la "barrera" para defenderse en caso de enfrentarse a perros u otros peligros, además de enfatizar que cualquier acción que ayude a sentirse segura es una forma de autodefensa.</p>
+                </div>
+
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p> <b>Security and self-defense accessories</b> <br> <br>
+                        The session continued with a talk on safety accessories that can make your trips safer. The participants learned about essential elements such as chains, reflectors, lights, helmets and vests. They were also encouraged to think about situations that could put them on alert during their journeys.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>In a dynamic activity, the facilitators provided vests, pens and paints to the students, inviting them to write messages addressed to drivers to make them more aware of their presence and ensure a safer journey.</p>
+                </div>
+
+                <div class="step" data-step="3">
+                    <p>The last part of the session was dedicated to bicycle self-defense techniques. The facilitators taught strategies such as the "horse" and the "barrier" to defend oneself in case of facing dogs or other dangers, in addition to emphasizing that any action that helps one feel safe is a form of self-defense.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/31.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <div class="step" data-step="1">
+                <p> <b>Hallazgos significativos</b> <br> <br>
+                    La actividad rompehielos fue clave para entender las diferentes experiencias y niveles de confianza de las participantes. Las jóvenes con menos experiencia en bicicleta tendieron a mostrarse más retraídas e inseguras, mientras que las que ya utilizaban la bicicleta con regularidad se mostraron más participativas y seguras en las actividades.
+                </p>
+            </div>
+            <div class="step" data-step="2">
+                <p>A pesar del cansancio inicial, las participantes se involucraron cada vez más conforme avanzaba la sesión. Al final, muchas compartieron que lo aprendido durante la jornada les resultó interesante y útil para su vida cotidiana, especialmente en lo que respecta a la seguridad y confianza al usar la bicicleta.</p>
+            </div>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p> <b>Significant findings</b> <br> <br>
+                        The icebreaker activity was key to understanding the different experiences and levels of confidence of the participants. Young women with less experience on a bicycle tended to be more withdrawn and insecure, while those who already used a bicycle regularly were more participatory and confident in the activities.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>Despite initial fatigue, the participants became increasingly involved as the session progressed. In the end, many shared that what they learned during the day was interesting and useful for their daily lives, especially with regard to safety and confidence when using the bicycle.</p>
+                </div>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/32.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>La sesión Mujeres al Pedal 2 fue un paso importante para fortalecer la seguridad, confianza y autonomía de las jóvenes participantes. Las facilitadoras continuarán trabajando en estrategias que permitan seguir desarrollando las habilidades de las jóvenes en el uso de la bicicleta, mientras fomentan un entorno de apoyo y seguridad.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>The Women at the Pedal 2 session was an important step to strengthen the security, confidence and autonomy of the young participants. The facilitators will continue working on strategies that will allow them to continue developing the girls' skills in using bicycles, while fostering an environment of support and safety.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/33.jpg" autoplay class="image__center">
+            </figure>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/34.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Empoderando a las jóvenes con habilidades prácticas para el cuidado de la bicicleta</b> <br><br>
+                        El pasado viernes 4 de octubre, el proyecto Entornos Amables continuó con su quinta sesión, Mujeres al Pedal 3, enfocada en enseñar a las jóvenes habilidades prácticas para el mantenimiento básico de la bicicleta. La jornada comenzó con una divertida actividad rompehielos: un juego de Jenga. A medida que las participantes retiraban las piezas del juego, cada una contenía preguntas que las estudiantes respondieron, lo que permitió un momento de recreación y conocimiento mutuo.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Empowering young women with practical bicycle care skills</b> <br><br>
+                        Last Friday, October 4, the Friendly Environments project continued with its fifth session, Women on the Pedal 3, focused on teaching young women practical skills for basic bicycle maintenance. The day began with a fun icebreaker activity: a game of Jenga. As the participants removed the game pieces, each one contained questions that the students answered, allowing for a moment of recreation and mutual knowledge. </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/35.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>La primera actividad fue dedicada a las herramientas básicas. Las facilitadoras formaron cuatro grupos y entregaron a cada uno un kit de herramientas y un crucigrama. Durante unos minutos, las estudiantes resolvieron el ejercicio y luego discutieron en grupo la función de cada herramienta incluida en el kit, aprendiendo cómo se utilizan para el mantenimiento de la bicicleta.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>La segunda actividad consistió en desmontar y parchar llantas. En equipos previamente formados, las estudiantes recibieron las instrucciones necesarias para desmontar una llanta de bicicleta. Posteriormente, realizaron el ejercicio de parchado utilizando un pedazo de recámara y una lija. Al finalizar, algunas participantes, por decisión propia, colaboraron con la facilitadora en el rearmado de la llanta en la bicicleta; esto refleja un compromiso con las sesiones, apropiación del conocimiento e interés en el tema.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>The first activity was dedicated to basic tools. The facilitators formed four groups and gave each one a tool kit and a crossword puzzle. For a few minutes, the students solved the exercise and then discussed as a group the function of each tool included in the kit, learning how they are used for bicycle maintenance.</p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>The second activity consisted of removing and patching tires. In previously formed teams, the students received the necessary instructions to disassemble a bicycle tire. Subsequently, they performed the patching exercise using a piece of breech and sandpaper. At the end, some participants, by their own decision, collaborated with the facilitator in reassembling the tire on the bicycle; This reflects a commitment to the sessions, appropriation of knowledge and interest in the topic.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/36.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>Durante la actividad, se observó un notable interés por parte de las estudiantes en el proceso de desmontaje de las llantas y el uso de las herramientas. 
+                        Las participantes comentaron que disfrutaron mucho practicar los ejercicios de reparación y que encontraron interesante el uso de las herramientas. Este aprendizaje práctico no solo les permitió desarrollar nuevas habilidades, sino que también las motivó a sentirse más seguras y autónomas al momento de cuidar sus bicicletas.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>During the activity, a notable interest was observed on the part of the students in the process of disassembling the tires and the use of the tools. 
+                        The participants commented that they really enjoyed practicing the repair exercises and that they found the use of the tools interesting. This practical learning not only allowed them to develop new skills, but also motivated them to feel more confident and autonomous when taking care of their bicycles.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/37.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflexión y próximos pasos</b> <br><br>
+                        La sesión Mujeres al Pedal 3 fue una excelente oportunidad para que las participantes adquirieran habilidades prácticas que fomentan la autonomía y seguridad en el uso de la bicicleta. Las facilitadoras seguirán trabajando en la capacitación de las jóvenes para fortalecer su confianza y habilidades, permitiéndoles ser más independientes y conscientes del cuidado de sus medios de transporte.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Reflection and next steps</b> <br><br>
+                        The Women at the Pedal 3 session was an excellent opportunity for participants to acquire practical skills that promote autonomy and safety when using the bicycle. The facilitators will continue working on training the young women to strengthen their confidence and skills, allowing them to be more independent and aware of taking care of their means of transportation.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/38.jpg" class="image__center">
+            </figure>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/39.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Entendiendo las Regulaciones: Empoderando a las jóvenes para promover un transporte más seguro</b> <br><br>
+                        El pasado viernes 11 de octubre, el proyecto Entornos Amables celebró su sexta y última sesión, Mujeres al Pedal 4, centrada en la comprensión de las regulaciones de ciclismo a nivel local, nacional e internacional. Esta sesión fue clave para fortalecer el conocimiento de las participantes sobre las políticas de movilidad y cómo influyen en la seguridad de los ciclistas y peatones.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Understanding the Regulations: Empowering young women to promote safer transportation</b> <br><br>
+                        Last Friday, October 11, the Friendly Environments project held its sixth and final session, Women Pedal 4, focused on understanding cycling regulations at the local, national and international level. This session was key to strengthening the participants' knowledge about mobility policies and how they influence the safety of cyclists and pedestrians.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/40.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p>Durante la jornada, las participantes profundizaron en la pirámide de movilidad desarrollada por la Organización Mundial de la Salud (OMS), la cual prioriza los medios de transporte según su necesidad de protección. La pirámide destaca la importancia de garantizar la seguridad de peatones y ciclistas, colocándolos en la base, mientras que los vehículos motorizados quedan en la parte superior.
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p>
+                        En el contexto latinoamericano, esta pirámide de movilidad tradicional está invertida, lo que favorece el movimiento de vehículos motorizados sobre la seguridad de peatones y ciclistas. Este fenómeno es evidente en Mérida, donde las malas condiciones para el ciclismo y la falta de carriles bici designados representan un desafío constante para quienes optan por la bicicleta como medio de transporte.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p>During the day, the participants delved into the mobility pyramid developed by the World Health Organization (WHO), which prioritizes means of transportation according to their need for protection. The pyramid highlights the importance of ensuring the safety of pedestrians and cyclists, placing them at the base, while motorized vehicles are at the top.
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p>In the Latin American context, this traditional mobility pyramid is inverted, favoring the movement of motorized vehicles over the safety of pedestrians and cyclists. This phenomenon is evident in Mérida, where poor cycling conditions and the lack of designated bike lanes represent a constant challenge for those who choose to use bicycles as a means of transportation.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/41.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Empoderando a las participantes para el cambio</b> <br><br>
+                    La reflexión en torno a estas problemáticas permitió que las jóvenes participantes se sintieran más empoderadas para abogar por una infraestructura urbana más segura y accesible para todos. La sesión no solo brindó herramientas teóricas sobre las normativas vigentes, sino que también motivó a las participantes a ser agentes de cambio en sus comunidades, promoviendo políticas públicas que favorezcan el uso seguro de la bicicleta y el respeto por los peatones.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Empowering participants for change</b> <br><br>
+                        Reflecting on these issues allowed the young participants to feel more empowered to advocate for a safer and more accessible urban infrastructure for all. The session not only provided theoretical tools on current regulations, but also motivated participants to be agents of change in their communities, promoting public policies that favor the safe use of bicycles and respect for pedestrians.
+                        </p>
+                </div>
+            </article>
+        </section>
+       
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/42.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Próximos pasos</b> <br><br>
+                        Con esta última sesión, del taller Mujeres al Pedal se concluyó un ciclo de formación integral para las participantes, pero las acciones de sensibilización y abogacía continúan. El trabajo conjunto de las jóvenes, sus facilitadoras y las comunidades en las que habitan seguirá siendo un motor fundamental para la creación de entornos más seguros y amigables para ciclistas y peatones.</p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+                <div class="step" data-step="1">
+                    <p><b>Next steps</b> <br><br>
+                        With this last session of the Women on the Pedal workshop, a comprehensive training cycle for the participants was concluded, but the awareness-raising and advocacy actions continue. The joint work of young women, their facilitators and the communities in which they live will continue to be a fundamental driver for the creation of safer and friendlier environments for cyclists and pedestrians. </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/43.jpg" class="image__center">
+            </figure>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/44.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Expresión artística colectiva: un mural para la comunidad estudiantil</b> <br><br>
+                        El proyecto Entornos Amables culminó con una intervención artística que involucró a las estudiantes de la preparatoria en la creación de un mural dentro de su entorno escolar. Esta intervención formó parte del tercer componente del proyecto, cuyo objetivo fue dar a las participantes la oportunidad de compartir, a través de imágenes y mensajes, sus experiencias y reflexiones luego de haber participado en el proceso. </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>
+                        La actividad fue facilitada por la artista boliviana Sara Kulli y se centró en discutir temas críticos como el cuidado de los animales callejeros, el acoso callejero, la violencia contra las personas mayores y el acceso restringido que enfrentan los jóvenes debido a diversas formas de violencia, tanto sexual como económica.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+
+                <div class="step" data-step="1">
+                    <p><b>Collective artistic expression: a mural for the student community</b> <br><br>
+                        The Friendly Environments project culminated with an artistic intervention that involved high school students in the creation of a mural within their school environment. This intervention was part of the third component of the project, whose objective was to give the participants the opportunity to share, through images and messages, their experiences and reflections after having participated in the process.
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p>The activity was facilitated by Bolivian artist Sara Kulli and focused on discussing critical issues such as the care of stray animals, street harassment, violence against older people and the restricted access that young people face due to various forms of violence, both sexual and economic.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/45.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Dos sesiones de trabajo colaborativo</b> <br><br>
+                        La actividad se llevó a cabo en dos sesiones. En la primera sesión, las participantes realizaron una lluvia de ideas para establecer la línea narrativa del mural, definiendo los mensajes clave que querían transmitir a la comunidad estudiantil. A través de este proceso, las jóvenes reflexionaron sobre las problemáticas que más las afectan y encontraron formas de expresarlas de manera visual. </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>
+                        En la segunda sesión, las estudiantes, junto con personas interesadas de la comunidad escolar, trabajaron de manera colaborativa para dar vida al mural. La actividad se convirtió en una hermosa y vibrante expresión colectiva de los temas discutidos, reflejando las preocupaciones y deseos de las participantes para transformar sus entornos.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+
+                <div class="step" data-step="1">
+                    <p><b>Two collaborative work sessions</b> <br><br>
+                        The activity was carried out in two sessions. In the first session, the participants brainstormed to establish the narrative line of the mural, defining the key messages they wanted to convey to the student community. Through this process, the young women reflected on the problems that most affect them and found ways to express them visually.  
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p>In the second session, the students, along with interested people from the school community, worked collaboratively to bring the mural to life. The activity became a beautiful and vibrant collective expression of the topics discussed, reflecting the concerns and desires of the participants to transform their environments.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/46.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Develación del mural y cierre de la actividad</b> <br><br>
+                        Dos semanas después de completar los bocetos, todas las estudiantes que participaron en el proceso, junto con el resto de la comunidad estudiantil, fueron invitadas a unirse a la fase final de la actividad. El evento también contó con la presencia del personal docente de la escuela, incluidos el director, la coordinadora del área y la profesora encargada del curso.  
+                         </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>
+                        Durante esta sesión final, las participantes compartieron el objetivo del mural, discutieron los aspectos clave del proceso y reflexionaron sobre el mensaje que deseaban transmitir a través de su obra. Los últimos detalles fueron añadidos de manera colaborativa, y la actividad concluyó con la develación del mural. Además, se entregaron certificados a todas las participantes como reconocimiento a su esfuerzo y compromiso durante el proceso.
+                    </p>
+                </div>
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+
+                <div class="step" data-step="1">
+                    <p><b>Unveiling of the mural and closing of the activity</b> <br><br>
+                        Two weeks after completing the sketches, all the students who participated in the process, along with the rest of the student community, were invited to join the final phase of the activity. The event was also attended by the school's teaching staff, including the director, the area coordinator and the teacher in charge of the course.
+                    </p>
+                </div>
+
+                <div class="step" data-step="2">
+                    <p>During this final session, participants shared the goal of the mural, discussed key aspects of the process, and reflected on the message they wanted to convey through their work. The final details were added collaboratively, and the activity concluded with the unveiling of the mural. In addition, certificates were given to all participants in recognition of their effort and commitment during the process.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="scrolly">
+            <figure class="figure__full">
+                <img src="img/47.jpg" class="image__full">
+            </figure>
+            <!-- español -->
+            <article class="lang-espanol article__center">
+                <div class="step" data-step="1">
+                    <p><b>Impacto y próximos pasos</b> <br><br>
+                        Este mural no solo se convierte en un símbolo de la participación activa de las estudiantes, sino también en un llamado a la reflexión sobre los temas de seguridad, respeto y convivencia que afectan a la comunidad escolar. Entornos Amables continúan trabajando para fomentar espacios de expresión y empoderamiento juvenil, abriendo camino hacia un entorno más seguro y consciente para todas las personas.</p>
+                </div>
+                
+            </article>
+            <!-- otro idioma -->
+            <article class="lang-otro article__center">
+
+                <div class="step" data-step="1">
+                    <p><b>Impact and next steps</b> <br><br>
+                        This mural not only becomes a symbol of the active participation of the students, but also a call to reflect on the issues of safety, respect and coexistence that affect the school community. Friendly Environments continue working to foster spaces for expression and youth empowerment, paving the way towards a safer and more conscious environment for all people.</p>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="scrolly text-block">
+            <article>
+                <br>
+                <br> 
+                <br>
+                <br>
+                <h3 class="creditostext">CRÉDITOS</h3>
+                <br><br>
+                <h3 class="creditostext"> Construyendo ciudades para todas y todes. <br>
+                    La experiencia Entornos Amables de Reflexión y Acción Feminista.
+                </h3>
+                <br>
+                <br>
+
+                <p>Un proyecto desarrollado por:</p>
+                <br>
+                <br>
+                <img src="img/raf.png" class="logoraf">
+                <br>
+                <br>
+                <br>
+                <p>En colaboracion con:</p>
+                <img src="img/kullisara.png" class="logoraf">
+                <br>
+                <br>
+                <br>
+                <p>Con el apoyo de:</p>
+  git              <img src="img/yours.png" class="logo">
+                <br>
+                <img src="img/coalition.png" class="logo">
+                <br>
+                <img src="img/50.png" class="logo">
+                <br>
+
+                <p>Con la colaboración en el desarrollo del storytelling digital de:</p>
+                <br>
+                <img src="img/bicidatos.png" class="logo">
+                <br>
+                <br>
+
+            </article>
+        </section>
+
+        <section class="scrolly text-block">
+            <article>
+                <h3 class="creditostext">ACERCA DE LA DIRECTORA DEL PROYECTO</h3>
+                <br>
+                <img src="img/paolabecerra.png" class="logoraf"><br>
+                <br>
+                <p>Paola Becerra García nació en Mérida, Yucatán en 1989. Es activista feminista, licenciada en Psicología por la Universidad Autónoma de Yucatán, se ha especializado en procesos grupales y colaborativos. 
+                   Formada en gestión de riesgos comunitarios, ecofeminismo y defensa del territorio en México y América Latina, Paola colabora con el colectivo Reflexión y Acción Feminista desde 2014.
+                Es ciclista urbana desde 2010 y es creadora e impulsora de la Escuela de Bicicletas RAF Mujeres al Pedal. Ha construido metodologías participativas que permiten a las mujeres conocer y habitar sus entornos.</p>
+                    <p>paolabecerra@rafeminista.net <br>
+                        9993291159</p> 
+            </article>
+        </section>
+
+        <section class="scrolly text-block">
+            <article>
+                <h3 class="creditostext">ACERCA DE REFLEXIÓN Y ACCIÓN FEMINISTA
+                </h3><br>
+                <p>Es una organización que se apoya en el feminismo para reflexionar sobre diversas situaciones en distintos ámbitos de la vida cotidiana, con una perspectiva feminista. El grupo se basa en el respeto y el diálogo para compartir posiciones e ideologías, visibilizar el entorno desigual en el que vivimos (violencia, acoso, feminicidios); visibilizar la participación de las mujeres y construir o facilitar espacios de empoderamiento de las mujeres según sus capacidades y contexto. Es un grupo de mujeres jóvenes que ha realizado acciones en el espacio público a favor de la movilidad segura y el desarrollo pleno de las mujeres de Mérida, con acciones que acercan a mujeres y niños a habitar la ciudad con libertad y autonomía.</p>
+        
+            </article>
+        </section>
+
+    </main>
+
+
+    <script>
+        function switchLanguage() {
+            const langEspanol = document.querySelectorAll('.lang-espanol');
+            const langOtro = document.querySelectorAll('.lang-otro');
+            const toggle = document.getElementById('lang-toggle');
+
+            langEspanol.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+            langOtro.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+        }
+
+        // Initially hide the Aymara content
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-otro').forEach(el => el.style.display = 'none');
+        });
+        // Initially hide the Aymara content
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-otro').forEach(el => el.style.display = 'none');
+        });
+    </script>
+
+</body>
+
+</html>
